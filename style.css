@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-size: medium;
+  font-family: Times New Roman, serif;
+}
+
+/*Header styles */
+header {
+  padding: 10px 30px;
+  margin: 20px;
+  box-shadow: 2px 2px rgb(0, 0, 0);
+  border-radius: 20px;
+  background-color: rgb(96, 94, 70);
+}
+
+header>h1 {
+  font-size: xx-large;
+  font-weight: bolder;
+  color: rgb(247, 243, 243);
+}
+
+header>small {
+  font-size: medium;
+  font-weight: 100;
+  color: rgb(236, 231, 231);
+}
+
+/* Form Styles */
+#formContainer {
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 2px 2px rgb(73, 66, 4);
+  border-radius: 20px;
+  background-color: rgb(140, 137, 112);
+  
+}
+
+#formContainer>#studentForm>.input-fields>label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#formContainer>#studentForm>.input-fields>input {
+  border: 2px solid rgb(73, 66, 4);
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+#formContainer>#studentForm>.input-fields {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+
+.list-item {
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 2px 2px rgb(73, 66, 4);
+  border-radius: 20px;
+  background-color: rgb(140, 137, 112);
+}
+
+
+#formContainer>#studentForm :Last-child>button {
+  background-color: rgb(197, 196, 184);
+  color: rgb(67, 70, 35);
+  padding: 5px;
+  border: 0px;
+  border-radius: 4px;
+  font-weight: bolder;
+  font-size: medium;
+  flex-grow: 1;
+  cursor: pointer;
+  
+}
+
+#formContainer>#studentForm :Last-child {
+  display: flex;
+  justify-content: center;
+}
+
+#studentList>.list-item>button {
+  background-color: rgb(197, 196, 184);
+  color: rgb(67, 70, 35);
+  padding: 8px;
+  border: 0px;
+  border-radius: 10px;
+  font-weight: bolder;
+  cursor: pointer;
+  
+}
+
+#studentList>.list-item>h2 {
+  color : white;
+  font-size: large;
+  
+}
+
+#studentList>.list-item>p{
+  color : white;
+}
+
+
+/*For list container*/
+#studentList {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+  
+}
+
+/* Responsive Design */
+/*mobile*/
+@media (width <=440px) {
+  #studentList>.list-item {
+    grid-column: span 12;
+  }
+}
+
+/*  tablet */
+@media (width > 440px) and (width <=960px) {
+  #studentList>.list-item {
+    grid-column: span 4;
+  }
+}
+
+/* desktop */
+@media (width >=1000px) {
+  #studentList>.list-item {
+    grid-column: span 2;
+  }
+}
